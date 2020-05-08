@@ -13,14 +13,9 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
-
+[image1]: ./examples/center.jpg "center"
+[image2]: ./examples/left.jpg "left"
+[image3]: ./examples/right.jpg "right"
 
 My project includes the following files:
 * model.py containing the script to create and train the model
@@ -93,6 +88,11 @@ Finally I implemented the Nvidia design as outlined above and the vehicle is abl
 #### 3. Creation of the Training Set & Training Process
 
 Although I played around with the simulator I found it quite difficult to drive and so used the pre-given training data as the basis to allow me to focus on the architecture experimentation. 
+
+The following images show data from the training set and most importantly the difference between the center, left and right camera. 
+![alt text][image1]
+![alt text][image2]
+![alt text][image3]
 
 Although other augumentation options were available I stuck to a simple, normalise, use left center and right camera and a shuffle. 
 
