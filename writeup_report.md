@@ -28,6 +28,8 @@ My project includes the following files:
 * model.h5 containing a trained convolution neural network 
 * writeup_report.md 
 
+Reference - Used code from the course content and the YouTube Q and A https://www.youtube.com/watch?v=rpxZ87YFg0M&feature=youtu.be.
+
 #### 2. Functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```sh
@@ -56,7 +58,7 @@ As per the referenced Nvidia architecture:
 
 20% of the data was retained for validation. 
 
-No additional dropout layers were required to increase the regularisation. 
+I added one layer of dropout after the first fully connected layer to help manage overfitting. 
 
 The main test of the model was to run it through the simulator and ensure that the vehicle could stay on the track.
 
@@ -64,9 +66,11 @@ The main test of the model was to run it through the simulator and ensure that t
 
 The model used an adam optimizer, so the learning rate was not tuned manually.
 
-#### 4. tTraining data
+#### 4. Training data
 
 Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, and left and right camera data with a steering correction of 0.2 and -0.2 applied. This was sufficient. 
+
+The batch size was 32 although as I used center, left and right images each batch included 96 images.
 
 ### Model Architecture and Training Strategy
 
@@ -91,5 +95,7 @@ Finally I implemented the Nvidia design as outlined above and the vehicle is abl
 Although I played around with the simulator I found it quite difficult to drive and so used the pre-given training data as the basis to allow me to focus on the architecture experimentation. 
 
 Although other augumentation options were available I stuck to a simple, normalise, use left center and right camera and a shuffle. 
+
+I also cropped the image to get rid of unrequired data. 
 
 After only 3 epochs the accuracy on the validation was sufficient to try on the simulator. 
