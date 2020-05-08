@@ -53,7 +53,7 @@ As per the referenced Nvidia architecture:
 
 20% of the data was retained for validation. 
 
-I added one layer of dropout after the first fully connected layer to help manage overfitting. 
+I added one layer of dropout after the first fully connected layer to help manage overfitting but this made the performance on the track worse so it was removed.
 
 The main test of the model was to run it through the simulator and ensure that the vehicle could stay on the track.
 
